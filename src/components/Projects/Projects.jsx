@@ -9,7 +9,7 @@ import { useTheme } from "../../../src/Context";
 const data = [
   {
     projectName: "Grow Up",
-    href: "https://www.notion.so/GrowUp-bab8134574d94ab694e34ba18920ccb6?pvs=4",
+    href: "https://pretty-warrior-0a2.notion.site/GrowUp-bab8134574d94ab694e34ba18920ccb6?pvs=4",
     img: GrowUp,
     desc: "Design & Development",
   },
