@@ -1,0 +1,33 @@
+.project-icon {
+  animation: UpAndDown 1s linear infinite;
+}
+
+@keyframes UpAndDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.content {
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.content a,
+p {
+  transition: all 0.25s linear;
+}
+
+.content:hover a {
+  transform: translateX(-10px);
+  color: rgb(100, 116, 139);
+}
+
+.content:hover p {
+  transform: translateX(10px);
+  color: rgb(37, 99, 235);
+}
