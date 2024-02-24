@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { useTheme } from "../../../src/Context";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { Dialog } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -11,10 +12,8 @@ import {
 } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "about", href: "/about" },
-  // { name: "archives", href: "archive" },
-  // { name: "contact", href: "contact" },
-  { name: "read.cv", href: "read.cv" },
+  { name: "About", path: "/about" },
+  { name: "Read CV", path: "/read.cv" },
 ];
 
 const Header = () => {
@@ -32,14 +31,14 @@ const Header = () => {
           className="px-8 mx-auto flex items-center justify-between h-24 md:max-w-4xl lg:max-w-7xl"
           aria-label="Global"
         >
-          <a
-            href="/"
+          <Link
+            to="/" // Update to use React Router's Link component
             className={`-m-1.5 p-1.5 ${
               theme === "dark" ? "text-white" : "text-black"
             }`}
           >
             Albert Barnabas
-          </a>
+          </Link>
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -53,15 +52,15 @@ const Header = () => {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href} // Update to use React Router's Link component
                 className={`text-sm leading-6 ${
                   theme === "dark" ? "text-white" : "text-black"
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <button
               className="text-black dark:text-white"
@@ -85,21 +84,20 @@ const Header = () => {
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
         >
-          {/* <div className="fixed inset-0 z-10" /> */}
           <Dialog.Panel
             className={`transition-all duration-1000 ${
               theme === "dark" ? "bg-black" : "bg-white"
             } fixed h-screen inset-y-0 right-0 z-10 w-full overflow-y-auto px-8 py-8 sm:max-w-full sm:ring-1 sm:ring-gray-900/10`}
           >
             <div className="flex items-center justify-between h-8">
-              <a
-                href="/"
+              <Link
+                to="/" // Update to use React Router's Link component
                 className={`-m-1.5 p-1.5 ${
                   theme === "dark" ? "text-white" : "text-black"
                 }`}
               >
                 Albert Barnabas
-              </a>
+              </Link>
               <button
                 type="button"
                 className={`-m-2.5 rounded-md p-2.5 ${
@@ -114,15 +112,15 @@ const Header = () => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href} // Update to use React Router's Link component
                       className={`-mx-3 block rounded-lg px-3 py-2 text-base leading-7 ${
                         theme === "dark" ? "text-white" : "text-black"
                       }`}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <button
