@@ -12,8 +12,8 @@ import { ThemeProvider } from "./Context.jsx";
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/about", element: <About /> },
-  { path: "/archive", element: <Archive /> },
-  { path: "/contact", element: <Contact /> },
+  // { path: "/archive", element: <Archive /> },
+  // { path: "/contact", element: <Contact /> },
   { path: "*", element: <NotFound /> },
 ]);
 
