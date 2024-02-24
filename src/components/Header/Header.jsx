@@ -54,7 +54,7 @@ const Header = () => {
             {navigation.map((item) => (
               <Link
                 key={item.name}
-                to={item.href} // Update to use React Router's Link component
+                to={item.path} // Update to use React Router's Link component
                 className={`text-sm leading-6 ${
                   theme === "dark" ? "text-white" : "text-black"
                 }`}
@@ -114,7 +114,7 @@ const Header = () => {
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
-                      to={item.href} // Update to use React Router's Link component
+                      to={item.path} // Update to use React Router's Link component
                       className={`-mx-3 block rounded-lg px-3 py-2 text-base leading-7 ${
                         theme === "dark" ? "text-white" : "text-black"
                       }`}
