@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "about", href: "about" },
+  { name: "about", href: "/about" },
   // { name: "archives", href: "archive" },
   // { name: "contact", href: "contact" },
   { name: "read.cv", href: "read.cv" },
