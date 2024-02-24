@@ -32,7 +32,7 @@ const Hero = () => {
                 theme === "dark" ? "border-white" : "border-black"
               } border-2 hover:opacity-60  lg:text-3xl
                 `}
-              href="/contact"
+              href="mailto:albert.barnabas@binus.ac.id"
               aria-label="Let's Talk"
             >
               Let's Talk.
