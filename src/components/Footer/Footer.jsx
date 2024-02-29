@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import { useTheme } from "../../../src/Context";
 import { motion } from "framer-motion";
 const navigation = {
   main: [
     { name: "LinkedIn", href: "https://www.linkedin.com/in/albert-barnabas/" },
     { name: "Instagram", href: "https://www.instagram.com/albertbarnabas_/" },
-    { name: "Github", href: "#" },
-    { name: "Behance", href: "#" },
+    { name: "Github", href: "https://www.github.com/albertbarnabas10" },
+    { name: "Behance", href: "https://bit.ly/DesignPortfolioAlbert" },
   ],
 };
 
@@ -49,12 +50,12 @@ export default function Footer() {
           >
             {navigation.main.map((item) => (
               <div key={item.name} className="">
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="text-xs lg:text-sm leading-6 text-gray-600 hover:text-blue-600"
                 >
                   {item.name}
-                </a>
+                </Link>
               </div>
             ))}
           </nav>
