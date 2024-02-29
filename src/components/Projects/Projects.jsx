@@ -5,6 +5,7 @@ import Mobilin from "../../assets/images/Mobilin.png";
 import Hansanesia from "../../assets/images/Hansanesia.png";
 import { motion } from "framer-motion";
 import { useTheme } from "../../../src/Context";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -79,7 +80,7 @@ const Projects = () => {
             theme === "dark" ? "text-white" : "text-black"
           }`}
         >
-          View More
+          <Link to="https://bit.ly/DesignPortfolioAlbert">View More</Link>
         </motion.button>
       </div>
     </motion.div>

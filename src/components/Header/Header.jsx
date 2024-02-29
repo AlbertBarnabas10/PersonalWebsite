@@ -13,7 +13,7 @@ import {
 
 const navigation = [
   { name: "About", path: "/about" },
-  { name: "Read CV", path: "/read.cv" },
+  { name: "Portfolio", path: "https://bit.ly/DesignPortfolioAlbert" },
 ];
 
 const Header = () => {
